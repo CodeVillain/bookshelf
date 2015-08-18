@@ -1,0 +1,66 @@
+#container {
+
+}
+
+.bookshelf {
+    position: relative;
+    width: 640px;
+    height: 960px;
+    background-size: contain;
+    background-image: url("../img/bookshelf.png");
+    margin: 0 auto;
+    padding: 50px 0 0 0;
+}
+
+.bookRow {
+    height: 175px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.bookItem {
+    position: relative;
+    width: 96px;
+    height: 175px;
+    display: table-cell;
+    vertical-align: bottom;
+}
+.bookItem .description {
+    visibility: hidden;
+    opacity: 0;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+    background: aqua;
+    border-radius: 5px;
+    z-index: 1;
+    padding: 5px 10px;
+    color: #ffffff;
+}
+
+.bookItem:hover {
+    cursor: pointer;
+}
+.bookItem:hover .description {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+.bookRow.detective .bookItem .description {
+    background: #6C9CA6;
+}
+.bookRow.fiction .bookItem .description {
+    background: #AC875B;
+}
+.bookRow.scientific .bookItem .description {
+    background: #B0B0B0;
+}
+.bookRow.business .bookItem .description {
+    background: #AF5F87;
+}
+.bookRow.thriller .bookItem .description {
+    background: #6B64A5;
+}
